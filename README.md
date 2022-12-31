@@ -11,7 +11,7 @@ STEP 1: The company's AWS account should be accessible and managed by the follow
 
 -Security Team: They should have full admin access with billing included in the company's AWS account.)
 
--Operations Team: They should only have full admin access to deploy ONLY in the us-east-1 region and should NOT be able to launch in any other region.
+-Operations Team: They should only have full admin access to deploy ONLY in the us-east-1 region and should NOT be able to launch in any other region. 
 
 
 STEP 2: Build a publicly available, highly available, and secure Dynamic website:
@@ -32,7 +32,7 @@ STEP 4: The company recently hired an auditing company named AUDIT CO, to provid
 
 STEP 5: Storage requirements:
 
--The company stores files of customer information and that information contains PII and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storsge solution thst will help NAS meet this requirement.) 
+-The company stores files of customer information and that information contains PII and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storage solution thst will help NAS meet this requirement.) 
 
 
 
