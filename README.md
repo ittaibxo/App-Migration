@@ -11,7 +11,7 @@ STEP 1: The company's AWS account should be accessible and managed by the follow
 
 -Security Team: They should have full admin access with billing included in the company's AWS account.)
 
--Operations Team: They should only have full admin access to deploy ONLY in the us-east-1 region and should NOT be able to launch in any other region. 
+-Operations Team: They should only have full admin access to deploy ONLY in the us-east-1 region and should NOT be able to launch in any other region.(Don't give Billing access). 
 
 
 STEP 2: Build a publicly available, highly available, and secure Dynamic website:
@@ -37,4 +37,14 @@ STEP 5: Storage requirements:
 
 
 ![AWS-Project-1 drawio](https://user-images.githubusercontent.com/94193627/210154669-d7065872-e86d-4ba4-81bb-f2e867ecc291.svg)
+
+
+
+* TIPS:
+
+-Remove the second ELB.
+
+-Remove the bastion host for AWS Systems Manager/SSM
+
+-Change ELB to ALB
 
