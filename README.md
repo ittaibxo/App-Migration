@@ -33,3 +33,8 @@ STEP 4: The company recently hired an auditing company named AUDIT CO, to provid
 STEP 5: Storage requirements:
 
 -The company stores files of customer information and that information contains PII and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storsge solution thst will help NAS meet this requirement.) 
+
+
+
+![AWS-Project-1 drawio](https://user-images.githubusercontent.com/94193627/210154669-d7065872-e86d-4ba4-81bb-f2e867ecc291.svg)
+
