@@ -1,8 +1,3 @@
-A company is running their workloads on-premise and would like to migrate some of their applications to the AWS cloud platform. 
-
-
----Design, implement, and manage a solution that will meet the following requirements---
-
 
 
 STEP 1: The company's AWS account should be accessible and managed by the following groups:
@@ -35,18 +30,6 @@ STEP 5: Storage requirements:
 -The company stores files of customer information and that information contains PII and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storage solution thst will help NAS meet this requirement.) 
 
 
-
-![AWS-Project-1 drawio](https://user-images.githubusercontent.com/94193627/210154669-d7065872-e86d-4ba4-81bb-f2e867ecc291.svg)
-
-
-
-* TIPS:
-
--Remove the second ELB.
-
--Remove the bastion host for AWS Systems Manager/SSM
-
--Change ELB to ALB
 
 ---------------------------------------------------------------
 
