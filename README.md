@@ -50,3 +50,7 @@ STEP 5: Storage requirements:
 
 ---------------------------------------------------------------
 
+![PROJECT-1-AWS drawio](https://user-images.githubusercontent.com/94193627/210157954-c8d0219e-c261-4de3-884b-8591c9aa64d4.svg)
+
+
+
