@@ -33,8 +33,4 @@
 
 ---------------------------------------------------------------
 
-
-![AWS-PROJECT-1 drawio](https://user-images.githubusercontent.com/94193627/210157976-9961e081-7522-4641-9c97-b04d87711035.svg)
-
-
-
+![original-aws-project-1 drawio](https://user-images.githubusercontent.com/94193627/211176980-e5955e94-04c1-434f-b6c3-d2df0ebe1604.svg)
