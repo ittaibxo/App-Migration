@@ -2,6 +2,9 @@
 
 # STEP 1: The company's AWS account should be accessible and managed by the following groups:
 
+<img width="1464" alt="AWS project #step1" src="https://user-images.githubusercontent.com/94193627/211228706-eba91bdc-0650-42c3-9e35-777bc87e89d3.png">
+
+
 -Engineers Team: They should have full admin access except for billing in the company's AWS account.)
 
 -Security Team: They should have full admin access with billing included in the company's AWS account.)
