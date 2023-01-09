@@ -47,4 +47,4 @@ After creating a "Root user" account in the management console and making sure t
 ## AREAS OF IMPROVEMENT:
 #### Serverless
 #### Add more services
-#### How to make it more secure
+#### Make it more secure
