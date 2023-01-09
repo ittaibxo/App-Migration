@@ -7,7 +7,7 @@ A company is running their workloads on-premise and would like to migrate some o
 #### Operations 
 <img width="1464" alt="AWS project #step1" src="https://user-images.githubusercontent.com/94193627/211228706-eba91bdc-0650-42c3-9e35-777bc87e89d3.png">
 
-After creating a "Root user" account in the management console and making sure to secure the account by enabling MFA, and creating an "Administrator" user that has full admin and billing access for security best practice. I then created the three user groups (Engineer, Security, and Operation) teams that will be in charge of managing the account's resources. 
+After creating a "Root user" account in the management console and making sure to secure the account by enabling MFA, and creating an "Administrator" user that has full admin and billing access for security best practice. I then created the three user groups (Engineer, Security, and Operation) teams with specific permissions that will allow them to manage the account's resources. 
 
 # STEP 1: The company's AWS account should be accessible and managed by the following groups:
 -Engineers Team: They should have full admin access except for billing in the company's AWS account.)
