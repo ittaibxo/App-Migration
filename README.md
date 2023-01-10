@@ -44,7 +44,9 @@ After creating a "Root user" account in the management console and making sure t
 ![original-aws-project-1 drawio](https://user-images.githubusercontent.com/94193627/211176980-e5955e94-04c1-434f-b6c3-d2df0ebe1604.svg)
 
 
-## AREAS OF IMPROVEMENT:
+## Benefits of This Solution:
+
+## Areas Of Improvement:
 #### Serverless
 #### Add more services
 #### Make it more secure
