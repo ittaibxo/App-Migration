@@ -24,7 +24,7 @@ After creating a "Root user" account in the management console and making sure t
 ## Task 4: Allow a third party company to access the company's internal application for auditing purposes
 - The third party company should only have access to the intranet application through its web interface using HTTP and the underline database from their own AWS account.
 
-## Task 4: Storage requirements
+## Task 5: Storage requirements
 
 - The company stores files of customer information and that information contains PII (Personally Identifiable Information) and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storage solution that will help the company meet this requirement.) 
 
