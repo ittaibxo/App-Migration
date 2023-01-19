@@ -16,6 +16,12 @@ After creating a "Root user" account in the management console and making sure t
 - The website should be able to self heal and adapt to the volume of traffic from customers. 
 - For disaster recovery, the application tier and database tier should be backed up in a different location. 
 - There should be at least 1 monitoring systems in place to notify the company in case the website is down. And finally, the management of the web server should only be done by the Engineering team using the most secured methods as per AWS best practices.
+<img width="1431" alt="Screenshot 2023-01-14 at 5 53 00 PM" src="https://user-images.githubusercontent.com/94193627/213542611-cb5500cb-2b26-4a95-8caf-b1106cb394b2.png">
+
+<img width="1463" alt="Screenshot 2023-01-14 at 5 16 26 PM" src="https://user-images.githubusercontent.com/94193627/213542783-0cc308b4-f71c-427e-9fef-f79d51c90ace.png">
+
+<img width="1373" alt="Screenshot 2023-01-14 at 5 47 28 PM" src="https://user-images.githubusercontent.com/94193627/213542825-2b293d65-9fd3-4750-b449-f62c816c90af.png">
+
 
 ## Task 3: Build a Dynamic application that is not publicly accessible (Intranet)
 
