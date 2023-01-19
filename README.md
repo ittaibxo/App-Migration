@@ -1,4 +1,4 @@
-# Use Case: 
+# Use Case: Application Migration using AWS Management Console
 A company is running their workloads on-premise and would like to migrate some of their applications to the AWS cloud platform. Design, implement, and manage a solution that will meet the company's requirements.
 
 ## Task 1: Create a company account and assign users to the following groups
