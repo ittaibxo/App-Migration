@@ -9,6 +9,10 @@ A company is running their workloads on-premise and would like to migrate some o
 
 After creating a "Root user" account in the management console and making sure to secure the account by enabling MFA, and creating an "Administrator" user that has full admin and billing access for security best practice. I then created the three user groups (Engineer, Security, and Operation) teams with specific permissions that will allow them to manage the account's resources. 
 
+
+
+
+
 ## Task 2: Build a publicly available, highly available, and secure Dynamic website with the following requirements:
 
 - All traffic from users to the website should be encrypted because of PCI (Payment Card Industry) complience.
