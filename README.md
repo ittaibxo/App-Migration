@@ -21,7 +21,7 @@ After creating a "Root user" account in the management console and making sure t
 - Self-healing website
 - Disaster recovery 
 - Service monitoring of the web server
-------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Task 2.1: 
 
 All traffic from users to the website should be encrypted because of PCI (Payment Card Industry) complience.
@@ -46,14 +46,14 @@ There should be at least 1 monitoring systems in place to notify the company in 
 - Make sure the server hosting the intranet has the ability to download and update packages on the internet. And users within the company should access the application through the HTTP.
 
 To achieve this, I did the following:
--Launched two servers in private subnets
--Followed the same configuration as Task 2.2
--Created an NAT gateway and attached it to the private servers' route table to allow the servers to download and make updates over the internet.
--Used session manager to allow users to access the web application through HTTP
+- Launched two servers in private subnets
+- Followed the same configuration as Task 2.2
+- Created an NAT gateway and attached it to the private servers' route table to allow the servers to download and make updates over the internet.
+- Used session manager to allow users to access the web application through HTTP
 
 ## Task 4: Allow a third party company to access the company's internal application for auditing purposes
 - The third party company should only have access to the intranet application through its web interface using HTTP and the underline database from their own AWS account.
--To achieve this, I created a VPC peering connection with the third party comapny's AWS account. Then created an IAM role and granted full permission access of the "Trusted Advisor" service to the company.
+- To achieve this, I created a VPC peering connection with the third party comapny's AWS account. Then created an IAM role and granted full permission access of the "Trusted Advisor" service to the company.
 
 ## Task 5: Storage requirements
 - The company stores files of customer information and that information contains PII (Personally Identifiable Information) and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storage solution that will help the company meet this requirement.) 
