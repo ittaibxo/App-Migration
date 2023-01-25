@@ -5,13 +5,10 @@ A company is running their workloads on-premise and would like to migrate some o
 #### Engineer: They should have full admin access except for billing in the company's AWS account.
 #### Security: They should have full admin access with billing included in the company's AWS account.
 #### Operations: They should only have full admin access to deploy ONLY in the us-east-1 region and should NOT be able to launch in any other region. And they should not have access to billing.
+
 <img width="1464" alt="AWS project #step1" src="https://user-images.githubusercontent.com/94193627/211228706-eba91bdc-0650-42c3-9e35-777bc87e89d3.png">
 
 After creating a "Root user" account in the management console and making sure to secure the account by enabling MFA, and creating an "Administrator" user that has full admin and billing access for security best practice. I then created the three user groups (Engineer, Security, and Operation) teams with specific permissions that will allow them to manage the account's resources. 
-
-
-
-
 
 ## Task 2: Build a publicly available, highly available, and secure Dynamic website with the following requirements:
 
@@ -26,21 +23,40 @@ After creating a "Root user" account in the management console and making sure t
 
 All traffic from users to the website should be encrypted because of PCI (Payment Card Industry) complience.
 - To achieve this, I created a certificate and attached it to the domain name
+
 ## Task 2.2:
 The dynamic web application should be highly available and fault tolerant
-- To achieve this, I launched the web application server in two different availability zones. Then created an application load balancer to distribute traffic between the servers. I created a replication of the database in a different region in case of a diasater. And finally, I created an image and snapshot of the web application. 
+- To achieve this, I launched the web application server in two different availability zones. 
+
+<img width="1424" alt="Screenshot 2023-01-25 at 11 46 45 AM" src="https://user-images.githubusercontent.com/94193627/214679043-3569be0e-26ef-4512-8400-dccc2109eef1.png">
+
+<img width="920" alt="Screenshot 2023-01-25 at 12 32 45 PM" src="https://user-images.githubusercontent.com/94193627/214679079-c295e0dd-44fa-4471-b03c-ad7c1dc6931e.png">
+
+<img width="904" alt="Screenshot 2023-01-25 at 12 33 20 PM" src="https://user-images.githubusercontent.com/94193627/214679101-95282fdd-467d-4671-b41c-947bcf34d6fc.png">
+
+Then created an application load balancer to distribute traffic between the servers. I created a replication of the database in a different region in case of a diasater. And finally, I created an image and snapshot of the web application. 
+
 ## Task 2.3:
 Because of GDPR (General Data Protection Regulation)compliance only USA customers should be able to access the dynamic website. But users in Europe and other continents should land on a static website. 
 - To achieve this, I created an S3 static website and created a Route53 record (subdomain) and modified the permission based on geographical location.
+
+
+Because of cost constraints, I did not register a domain, instead i will be explaining the steps thst need to be taken
+
 ## Task 2.4:
 The website should be able to self heal and adapt to the volume of traffic from customers.
 - To achieve this, I created a launch template application server and an auto-scaling group
+
 ## Task 2.5:
 For disaster recovery, the application tier and database tier should be backed up in a different location.
-- To achieve this, I created a replication of the database in another region. And created an image of the website server, took a snapshot and stored it to another region.
+- To achieve this, I created a replication of the database in another region. And created an image of the website server, took a snapshot and stored it to the other region.
+
 ## Task 2.6:
 There should be at least 1 monitoring systems in place to notify the company in case the website is down. 
 - I created a Cloudwatch alarm and an SNS topic to alert the company
+
+There is not enough data for the metric to determine the alarm state.
+
 
 ## Task 3: Build a Dynamic application that is not publicly accessible (Intranet)
 - Make sure the server hosting the intranet has the ability to download and update packages on the internet. And users within the company should access the application through the HTTP.
