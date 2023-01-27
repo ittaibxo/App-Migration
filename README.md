@@ -99,7 +99,8 @@ To achieve this, I created an S3 bucket where the files will be stored and encry
 
 # ARCHITECTURE SOLUTION:
 
-![original-aws-project-1 drawio](https://user-images.githubusercontent.com/94193627/211176980-e5955e94-04c1-434f-b6c3-d2df0ebe1604.svg)
+![Architecture](https://user-images.githubusercontent.com/94193627/215218883-fbae3035-6251-4d8b-82bd-3cd4ce3484ce.png)
+
 
 # Areas Of Improvement:
 #### Make this solution serverless
