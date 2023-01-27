@@ -28,6 +28,13 @@ All traffic from users to the website should be encrypted because of PCI (Paymen
 The dynamic web application should be highly available and fault tolerant
 - To achieve this, I launched the web application server in two different availability zones. 
 
+
+
+
+
+
+
+
 <img width="1424" alt="Screenshot 2023-01-25 at 11 46 45 AM" src="https://user-images.githubusercontent.com/94193627/214679043-3569be0e-26ef-4512-8400-dccc2109eef1.png">
 
 <img width="920" alt="Screenshot 2023-01-25 at 12 32 45 PM" src="https://user-images.githubusercontent.com/94193627/214679079-c295e0dd-44fa-4471-b03c-ad7c1dc6931e.png">
@@ -82,3 +89,41 @@ To achieve this, I created an S3 bucket where the files will be stored and encry
 ## Areas Of Improvement:
 #### Make this solution serverless
 #### Add more services
+
+
+cloudwatch
+<img width="1303" alt="Screenshot 2023-01-25 at 5 49 39 PM" src="https://user-images.githubusercontent.com/94193627/215164731-e6075788-3acf-438e-98a5-57a908c09709.png">
+sns
+<img width="1232" alt="Screenshot 2023-01-25 at 5 49 13 PM" src="https://user-images.githubusercontent.com/94193627/215164560-aa5182bb-58ea-4e35-9ee8-c22d669b21e7.png">
+static website
+<img width="1212" alt="Screenshot 2023-01-25 at 5 30 46 PM" src="https://user-images.githubusercontent.com/94193627/215164766-9988988f-2863-4481-a3e3-3a60a01fd817.png">
+
+<img width="1262" alt="Screenshot 2023-01-24 at 12 37 45 AM" src="https://user-images.githubusercontent.com/94193627/215165364-d5656142-2fea-4c60-808e-6cda556be925.png">
+
+
+ASG
+<img width="1220" alt="Screenshot 2023-01-25 at 5 23 37 PM" src="https://user-images.githubusercontent.com/94193627/215164916-001e07cd-ae54-4645-8ce1-ec0793414406.png">
+LAUNCH T
+<img width="1194" alt="Screenshot 2023-01-25 at 5 19 09 PM" src="https://user-images.githubusercontent.com/94193627/215165067-fee17cd1-6cf3-4f56-89e6-57e7447b5b22.png">
+TARGET GROUP
+<img width="1015" alt="Screenshot 2023-01-25 at 5 15 37 PM" src="https://user-images.githubusercontent.com/94193627/215165145-600aaa3c-cd78-4a1a-ab0c-8f8334b2ed94.png">
+
+LB
+<img width="1051" alt="Screenshot 2023-01-25 at 5 12 42 PM" src="https://user-images.githubusercontent.com/94193627/215165267-2574898b-d802-45a8-a820-f9d7334c1a9c.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
