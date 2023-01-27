@@ -27,32 +27,33 @@ All traffic from users to the website should be encrypted because of PCI (Paymen
 ## Task 2.2:
 The dynamic web application should be highly available and fault tolerant
 - To achieve this, I launched the web application server in two different availability zones. 
-
-
-
-
-
-
-
-
 <img width="1424" alt="Screenshot 2023-01-25 at 11 46 45 AM" src="https://user-images.githubusercontent.com/94193627/214679043-3569be0e-26ef-4512-8400-dccc2109eef1.png">
 
 <img width="920" alt="Screenshot 2023-01-25 at 12 32 45 PM" src="https://user-images.githubusercontent.com/94193627/214679079-c295e0dd-44fa-4471-b03c-ad7c1dc6931e.png">
 
 <img width="904" alt="Screenshot 2023-01-25 at 12 33 20 PM" src="https://user-images.githubusercontent.com/94193627/214679101-95282fdd-467d-4671-b41c-947bcf34d6fc.png">
 
-Then created an application load balancer to distribute traffic between the servers. I created a replication of the database in a different region in case of a diasater. And finally, I created an image and snapshot of the web application. 
+I created an application load balancer that is routed by a target group, then a launch template to ensure access to the latest features and improvements of Amazon EC2. and then finally, I created an auto scaling group to distribute traffic between the servers.  
+
+<img width="1051" alt="Screenshot 2023-01-25 at 5 12 42 PM" src="https://user-images.githubusercontent.com/94193627/215172650-1c9f8a9c-c30b-4cdf-b00e-1585e9531f2b.png">
+
+<img width="1015" alt="Screenshot 2023-01-25 at 5 15 37 PM" src="https://user-images.githubusercontent.com/94193627/215165145-600aaa3c-cd78-4a1a-ab0c-8f8334b2ed94.png">
 
 ## Task 2.3:
 Because of GDPR (General Data Protection Regulation)compliance only USA customers should be able to access the dynamic website. But users in Europe and other continents should land on a static website. 
 - To achieve this, I created an S3 static website and created a Route53 record (subdomain) and modified the permission based on geographical location.
 
+<img width="1212" alt="Screenshot 2023-01-25 at 5 30 46 PM" src="https://user-images.githubusercontent.com/94193627/215164766-9988988f-2863-4481-a3e3-3a60a01fd817.png">
 
 Because of cost constraints, I did not register a domain, instead i will be explaining the steps thst need to be taken
 
 ## Task 2.4:
-The website should be able to self heal and adapt to the volume of traffic from customers.
+The website should be able to self-heal and adapt to the volume of traffic from customers.
 - To achieve this, I created a launch template application server and an auto-scaling group
+
+<img width="1194" alt="Screenshot 2023-01-25 at 5 19 09 PM" src="https://user-images.githubusercontent.com/94193627/215165067-fee17cd1-6cf3-4f56-89e6-57e7447b5b22.png">
+
+<img width="1220" alt="Screenshot 2023-01-25 at 5 23 37 PM" src="https://user-images.githubusercontent.com/94193627/215164916-001e07cd-ae54-4645-8ce1-ec0793414406.png">
 
 ## Task 2.5:
 For disaster recovery, the application tier and database tier should be backed up in a different location.
@@ -62,8 +63,9 @@ For disaster recovery, the application tier and database tier should be backed u
 There should be at least 1 monitoring systems in place to notify the company in case the website is down. 
 - I created a Cloudwatch alarm and an SNS topic to alert the company
 
-There is not enough data for the metric to determine the alarm state.
+<img width="1303" alt="Screenshot 2023-01-25 at 5 49 39 PM" src="https://user-images.githubusercontent.com/94193627/215164731-e6075788-3acf-438e-98a5-57a908c09709.png">
 
+<img width="1232" alt="Screenshot 2023-01-25 at 5 49 13 PM" src="https://user-images.githubusercontent.com/94193627/215164560-aa5182bb-58ea-4e35-9ee8-c22d669b21e7.png">
 
 ## Task 3: Build a Dynamic application that is not publicly accessible (Intranet)
 - Make sure the server hosting the intranet has the ability to download and update packages on the internet. And users within the company should access the application through the HTTP.
@@ -89,41 +91,3 @@ To achieve this, I created an S3 bucket where the files will be stored and encry
 ## Areas Of Improvement:
 #### Make this solution serverless
 #### Add more services
-
-
-cloudwatch
-<img width="1303" alt="Screenshot 2023-01-25 at 5 49 39 PM" src="https://user-images.githubusercontent.com/94193627/215164731-e6075788-3acf-438e-98a5-57a908c09709.png">
-sns
-<img width="1232" alt="Screenshot 2023-01-25 at 5 49 13 PM" src="https://user-images.githubusercontent.com/94193627/215164560-aa5182bb-58ea-4e35-9ee8-c22d669b21e7.png">
-static website
-<img width="1212" alt="Screenshot 2023-01-25 at 5 30 46 PM" src="https://user-images.githubusercontent.com/94193627/215164766-9988988f-2863-4481-a3e3-3a60a01fd817.png">
-
-<img width="1262" alt="Screenshot 2023-01-24 at 12 37 45 AM" src="https://user-images.githubusercontent.com/94193627/215165364-d5656142-2fea-4c60-808e-6cda556be925.png">
-
-
-ASG
-<img width="1220" alt="Screenshot 2023-01-25 at 5 23 37 PM" src="https://user-images.githubusercontent.com/94193627/215164916-001e07cd-ae54-4645-8ce1-ec0793414406.png">
-LAUNCH T
-<img width="1194" alt="Screenshot 2023-01-25 at 5 19 09 PM" src="https://user-images.githubusercontent.com/94193627/215165067-fee17cd1-6cf3-4f56-89e6-57e7447b5b22.png">
-TARGET GROUP
-<img width="1015" alt="Screenshot 2023-01-25 at 5 15 37 PM" src="https://user-images.githubusercontent.com/94193627/215165145-600aaa3c-cd78-4a1a-ab0c-8f8334b2ed94.png">
-
-LB
-<img width="1051" alt="Screenshot 2023-01-25 at 5 12 42 PM" src="https://user-images.githubusercontent.com/94193627/215165267-2574898b-d802-45a8-a820-f9d7334c1a9c.png">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
