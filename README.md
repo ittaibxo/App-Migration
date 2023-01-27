@@ -16,13 +16,17 @@ After creating a "Root user" account in the management console and making sure t
 - Dynamic application
 - Access website based on location 
 - Self-healing website
+- Database
 - Disaster recovery 
 - Service monitoring of the web server
 
 ## Task 2.1: 
 
 All traffic from users to the website should be encrypted because of PCI (Payment Card Industry) complience.
-- To achieve this, I created a certificate and attached it to the domain name
+- To achieve this, I created a certificate and attached it to the domain name in Route 53.
+
+<img width="1252" alt="Screenshot 2023-01-27 at 2 40 25 PM" src="https://user-images.githubusercontent.com/94193627/215182338-98e3071f-ea10-48a3-be1c-091058b2bb9b.png">
+
 
 ## Task 2.2:
 The dynamic web application should be highly available and fault tolerant
@@ -45,7 +49,11 @@ Because of GDPR (General Data Protection Regulation)compliance only USA customer
 
 <img width="1212" alt="Screenshot 2023-01-25 at 5 30 46 PM" src="https://user-images.githubusercontent.com/94193627/215164766-9988988f-2863-4481-a3e3-3a60a01fd817.png">
 
-Because of cost constraints, I did not register a domain, instead i will be explaining the steps thst need to be taken
+Because of cost constraints, I did not register a domain, but these are the folowing steps that needs to be taken below.
+
+<img width="885" alt="Screenshot 2023-01-27 at 2 27 55 PM" src="https://user-images.githubusercontent.com/94193627/215181327-354a1d00-c613-46d1-aade-1c749c32dff5.png">
+
+<img width="950" alt="Screenshot 2023-01-27 at 2 37 06 PM" src="https://user-images.githubusercontent.com/94193627/215181817-9434ec40-dbd7-4c11-b313-1c6675344e4d.png">
 
 ## Task 2.4:
 The website should be able to self-heal and adapt to the volume of traffic from customers.
@@ -56,10 +64,14 @@ The website should be able to self-heal and adapt to the volume of traffic from 
 <img width="1220" alt="Screenshot 2023-01-25 at 5 23 37 PM" src="https://user-images.githubusercontent.com/94193627/215164916-001e07cd-ae54-4645-8ce1-ec0793414406.png">
 
 ## Task 2.5:
-For disaster recovery, the application tier and database tier should be backed up in a different location.
-- To achieve this, I created a replication of the database in another region. And created an image of the website server, took a snapshot and stored it to the other region.
+- Creating a database for the webserver
 
+To achieve this I created a primary MySQL database from Amazon Relational Database Service (RDS). Then I created a standby in the same AZ's as the webservers. 
 ## Task 2.6:
+For disaster recovery, the application tier and database tier should be backed up in a different location.
+- To achieve this, I created an image of the website server, took a snapshot and stored it to another region. And created a replication of the database in another region as well.
+
+## Task 2.7:
 There should be at least 1 monitoring systems in place to notify the company in case the website is down. 
 - I created a Cloudwatch alarm and an SNS topic to alert the company
 
@@ -74,20 +86,21 @@ To achieve this, I did the following:
 - Launched two servers in private subnets
 - Followed the same configuration as Task 2.2
 - Created an NAT gateway and attached it to the private servers' route table to allow the servers to download and make updates over the internet.
-- Used session manager to allow users to access the web application through HTTP
+- Used session manager to allow users to access the web application through SSH
 
 ## Task 4: Allow a third party company to access the company's internal application for auditing purposes
 - The third party company should only have access to the intranet application through its web interface using HTTP and the underline database from their own AWS account.
-- To achieve this, I created a VPC peering connection with the third party comapny's AWS account. Then created an IAM role and granted full permission access of the "Trusted Advisor" service to the company.
+- To achieve this, I created a VPC peering connection with the third party comapny's AWS account. Then created an EC2 instance IAM role and granted least privileged access of the "Trusted Advisor" service to the third party company.
 
 ## Task 5: Storage requirements
 - The company stores files of customer information and that information contains PII (Personally Identifiable Information) and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storage solution that will help the company meet this requirement.) 
-To achieve this, I created an S3 bucket where the files will be stored and encrypted it using SSE-S3. And then, I created a lifecycle policy on the bucket to transition the files from S3 standard after 30 days then move to Deep Glacier and remain there for 5 years.
+
+To achieve this, I created an S3 bucket where the files will be stored and encrypted using SSE-S3. And then, I created a lifecycle policy on the bucket to transition the files from S3 standard after 30 days then move to Deep Glacier and remain there for 5 years.
 
 # ARCHITECTURE SOLUTION:
 
 ![original-aws-project-1 drawio](https://user-images.githubusercontent.com/94193627/211176980-e5955e94-04c1-434f-b6c3-d2df0ebe1604.svg)
 
-## Areas Of Improvement:
+# Areas Of Improvement:
 #### Make this solution serverless
-#### Add more services
+#### Make this solution more secure
