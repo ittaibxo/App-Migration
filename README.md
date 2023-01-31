@@ -69,7 +69,7 @@ The website should be able to self-heal and adapt to the volume of traffic from 
 To achieve this I created a primary MySQL database from Amazon Relational Database Service (RDS). Then I created a standby in the same AZ's as the webservers. 
 ## Task 2.6:
 For disaster recovery, the application tier and database tier should be backed up in a different location.
-- To achieve this, I created an image of the website server, took a snapshot and stored it to another region. And created a replication of the database in another region as well.
+- To achieve this, I created an image of the website server, took a snapshot and stored it to another region. And then created a new database in that region as well.
 
 ## Task 2.7:
 There should be at least 1 monitoring systems in place to notify the company in case the website is down. 
@@ -80,17 +80,16 @@ There should be at least 1 monitoring systems in place to notify the company in 
 <img width="1232" alt="Screenshot 2023-01-25 at 5 49 13 PM" src="https://user-images.githubusercontent.com/94193627/215164560-aa5182bb-58ea-4e35-9ee8-c22d669b21e7.png">
 
 ## Task 3: Build a Dynamic application that is not publicly accessible (Intranet)
-- Make sure the server hosting the intranet has the ability to download and update packages on the internet. And users within the company should access the application through the HTTP.
+- Make sure the server hosting the intranet has the ability to download and update packages on the internet. And users within the company should access the application through the HTTP protocol.
 
 To achieve this, I did the following:
 - Launched two servers in private subnets
-- Followed the same configuration as Task 2.2
+- Followed the same configuration as Task 2.2, but the security group and NACL for this intranet webserver should only open/allow the HTTP and HTTPS protocols
 - Created an NAT gateway and attached it to the private servers' route table to allow the servers to download and make updates over the internet.
-- Used session manager to allow users to access the web application through SSH
 
 ## Task 4: Allow a third party company to access the company's internal application for auditing purposes
 - The third party company should only have access to the intranet application through its web interface using HTTP and the underline database from their own AWS account.
-- To achieve this, I created a VPC peering connection with the third party comapny's AWS account. Then created an EC2 instance IAM role and granted least privileged access of the "Trusted Advisor" service to the third party company.
+- To achieve this, I used AWS Systems Manager session manager to allow the third party account access the web application through IAM roles and without using SSH keys or opening SSH ports in the webserver's security group.
 
 ## Task 5: Storage requirements
 - The company stores files of customer information and that information contains PII (Personally Identifiable Information) and therefore should be encrypted at rest. The files are regularly accessed for 30 days and then need to be archived and records kept for 5 years. (Recommend a storage solution that will help the company meet this requirement.) 
@@ -104,4 +103,3 @@ To achieve this, I created an S3 bucket where the files will be stored and encry
 
 # Areas Of Improvement:
 #### Make this solution serverless
-#### Make this solution more secure
