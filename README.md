@@ -46,10 +46,9 @@ I created an application load balancer that is routed by a target group, then a 
 ## Task 2.3:
 Because of GDPR (General Data Protection Regulation)compliance only USA customers should be able to access the dynamic website. But users in Europe and other continents should land on a static website. 
 - To achieve this, I created an S3 static website and created a Route53 record (subdomain) and modified the permission based on geographical location.
+- Because of cost constraints, I did not register a domain, but these are the folowing steps that needs to be taken.
 
 <img width="1212" alt="Screenshot 2023-01-25 at 5 30 46 PM" src="https://user-images.githubusercontent.com/94193627/215164766-9988988f-2863-4481-a3e3-3a60a01fd817.png">
-
-Because of cost constraints, I did not register a domain, but these are the folowing steps that needs to be taken below.
 
 <img width="885" alt="Screenshot 2023-01-27 at 2 27 55 PM" src="https://user-images.githubusercontent.com/94193627/215181327-354a1d00-c613-46d1-aade-1c749c32dff5.png">
 
